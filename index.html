@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Elifoot">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Foot Admin - A new way to football</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="css/plugins/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/ui-lightness/jquery-ui.min.css" />
+    <link rel="stylesheet" href="css/fullcalendar.css">
+
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/fileinput.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-datetimepicker.css" rel="stylesheet" />
+    <link href="css/ngDialog.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/ngDialog-theme-default.css">
+    <link rel="stylesheet" href="css/ngDialog-theme-plain.css">
+    <link rel="stylesheet" href="css/ngDialog-custom-width.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="ng-scope ngdialog-open" style="overflow-y: auto !important;">
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#/index">Admin</a>
+            </div>
+
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+                <li class="dropdown">
+                    <a href="#/home" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
+                    <ul class="dropdown-menu message-dropdown">
+                        <li class="message-preview">
+                            <a href="#/home">
+                                <div class="media">
+                                    <span class="pull-left">
+                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                    </span>
+                                    <div class="media-body">
+                                        <h5 class="media-heading"><strong>John Smith</strong>
+                                        </h5>
+                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="message-preview">
+                            <a href="#/home">
+                                <div class="media">
+                                    <span class="pull-left">
+                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                    </span>
+                                    <div class="media-body">
+                                        <h5 class="media-heading"><strong>John Smith</strong>
+                                        </h5>
+                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="message-preview">
+                            <a href="#/home">
+                                <div class="media">
+                                    <span class="pull-left">
+                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                    </span>
+                                    <div class="media-body">
+                                        <h5 class="media-heading"><strong>John Smith</strong>
+                                        </h5>
+                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="message-footer">
+                            <a href="#/home">Read All New Messages</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#/home" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
+                    <ul class="dropdown-menu alert-dropdown">
+                        <li>
+                            <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">View All</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#/home" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> José Amador <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-user"></i> Perfil</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-gear"></i> Configurações</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Fechar sessão</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li class="active">
+                        <a href="#/home"><i class="fa fa-fw fa-dashboard"></i> Home</a>
+                    </li>
+                    <li>
+                        <a href="#/classification"><i class="fa fa-fw fa-table"></i> Classificação</a>
+                    </li>
+                    <li>
+                      <a href="javascript:;" data-toggle="collapse" data-target="#allteam"><i class="fa fa-fw fa-folder-open-o"></i> Plantel <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="allteam" class="collapse">
+                          <li>
+                            <a href="#/players"><i class="glyphicon glyphicon-paste"></i> Plantel Geral</a>
+                          </li>
+                          <li>
+                              <a href="#/addplayer"><i class="glyphicon glyphicon-user"></i> Adicionar Jogador</a>
+                          </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#/calendar"><i class="fa fa-fw fa-calendar"></i> Calendário</a>
+                    </li>
+                    <li>
+                        <a href="#/practices"><i class="fa fa-fw fa-futbol-o"></i> Treinos</a>
+                    </li>
+                    <li>
+                      <a href="javascript:;" data-toggle="collapse" data-target="#suplements"><i class="fa fa-fw fa-heart"></i> Suplementação <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="suplements" class="collapse">
+                          <li>
+                            <a href="https://www.prozis.com/pt/pt"><i class="glyphicon glyphicon-paste"></i> Prozis</a>
+                          </li>
+                          <li>
+                              <a href="http://www.herbalife.pt/"><i class="glyphicon glyphicon-paste"></i> Herbalife</a>
+                          </li>
+                          <li>
+                              <a href="https://mywhey.pt/"><i class="glyphicon glyphicon-paste"></i> Mywhey</a>
+                        </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#/scouting"><i class="fa fa-fw fa-css3"></i> Scouting</a>
+                    </li>
+                    <li>
+                        <a href="#/agency"><i class="fa fa-fw fa-weibo"></i> Agenciamento</a>
+                    </li>
+                    <li>
+                        <a href="#/about"><i class="fa fa-fw fa-wrench"></i> Sobre</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="container-fluid">
+
+                <!-- /.row -->
+                <div ng-view></div>
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+
+    <!-- JavaScript libraries -->
+    <!-- jQuery -->
+    <script src="js/untouchedjs/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/untouchedjs/bootstrap.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="js/plugins/morris/raphael.min.js"></script>
+    <script src="js/plugins/morris/morris.min.js"></script>
+
+    <!-- AngularJS lib -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/1.5.8/angular-route.min.js"></script>
+
+    <script type="text/javascript" src="js/untouchedjs/moment.js"></script>
+    <script type="text/javascript" src="js/untouchedjs/fullcalendar.js"></script>
+    <script type="text/javascript" src="js/untouchedjs/gcal.js"></script>
+    <script type="text/javascript" src="js/untouchedjs/calendar.js"></script>
+    <script type="text/javascript" src="js/untouchedjs/angular-dragdrop.min.js"></script>
+    <script type="text/javascript" src="js/untouchedjs/fileinput.js"></script>
+    <script type="text/javascript" src="js/untouchedjs/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript" src="js/untouchedjs/ngDialog.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2017.1.118/js/kendo.all.min.js"></script>
+
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/routes.js"></script>
+
+
+    <!-- Controllers -->
+    <script type="text/javascript" src="js/controllers/leagues-index-controller.js"></script>
+    <script type="text/javascript" src="js/controllers/fixtures-index-controller.js"></script>
+    <script type="text/javascript" src="js/controllers/feeds-controller.js"></script>
+    <script type="text/javascript" src="js/controllers/teams-index-controller.js"></script>
+    <script type="text/javascript" src="js/controllers/classification-index-controller.js"></script>
+    <script type="text/javascript" src="js/controllers/calendar-controller.js"></script>
+    <script type="text/javascript" src="js/controllers/practices-controller.js"></script>
+
+    <!-- Services -->
+    <script type="text/javascript" src="js/services/leagues.js"></script>
+    <script type="text/javascript" src="js/services/fixtures.js"></script>
+    <script type="text/javascript" src="js/services/feeds.js"></script>
+    <script type="text/javascript" src="js/services/teams.js"></script>
+    <script type="text/javascript" src="js/services/classification.js"></script>
+    <script type="text/javascript" src="js/services/practices.js"></script>
+
+    <!-- Dialog -->
+    <script type="text/ng-template" id="alertTemplate.html">
+        <div class="ngdialog-message" style="text-align: center !important;">
+    				<h2><i class="fa fa-exclamation-triangle" style="color: red;"></i> {{data.message}}</h2></i>
+            <h3>Vamos a isso?
+              <a href="#/practices#{{data.nearPractice.identification}}" style="color: black;" ng-click="closeThisDialog()">
+                <i class="fa fa-arrow-circle-o-right" />
+              </a>
+            </h3>
+            <br/>
+
+            <ul class="nav" style="text-align: center">
+                <li>
+                    <a class="dropdown-toggle" data-toggle="dropdown" style="color: black;"><h3><i class="glyphicon glyphicon-th-list"></i> Detalhe do Treino </h3></a>
+                    <ul class="dropdown-menu" style="text-align: center; margin-left: 125px">
+                      <li>
+                        <i class="fa fa-id-card" aria-hidden="true"></i> <span class="label label-primary">{{data.nearPractice.identification}}</span></a>
+                      </li>
+                      <li>
+                        <i class="fa fa-barcode" aria-hidden="true"></i> <small>{{data.nearPractice.description}}</small></a>
+                      </li>
+                      <li>
+                        <i class="fa fa-bolt" aria-hidden="true"></i> <small>{{data.nearPractice.type}}</small></a>
+                      </li>
+                      <li>
+                        <i class="fa fa-calendar" aria-hidden="true"></i> <small>{{data.nearPractice.datetime}}</small></a>
+                      </li>
+                    </ul>
+                </li>
+            </ul>
+    </script>
+</body>
+
+</html>

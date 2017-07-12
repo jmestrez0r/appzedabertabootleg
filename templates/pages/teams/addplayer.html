@@ -1,0 +1,124 @@
+<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.1.118/styles/kendo.common-material.min.css" />
+<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.1.118/styles/kendo.material.min.css" />
+<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.1.118/styles/kendo.material.mobile.min.css" />
+
+<!-- Page Heading -->
+<div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">
+          <i><img src="{{effectiveTeam.crestUrl}}" height="50px" width="50px"></img></i> Adicionar Jogador
+      </h1>
+    </div>
+    <div class="col-lg-12">
+      <ol class="breadcrumb">
+          <li>
+              <i class="fa fa-dashboard"></i> Dashboard / Plantel - <b>{{effectiveTeam.name}}</b> / Adicionar Jogador
+          </li>
+      </ol>
+    </div>
+
+    <div class="row">
+
+      <!-- coluna 1 -->
+      <div class="col-lg-3">
+          <div class="form-group">
+              <label>Nome:</label>
+              <input class="form-control">
+          </div>
+
+          <div class="form-group">
+              <label>Nacionalidade:</label>
+              <input class="form-control">
+          </div>
+
+          <div class="form-group">
+              <label>Data de Nascimento:</label>
+              <div >
+                <div >
+                    <input type='text' class="form-control" id='datetimepicker4' />
+                </div>
+                <script type="text/javascript">
+                    $(function () {
+                        $('#datetimepicker4').datetimepicker();
+                    });
+                </script>
+              </div>
+          </div>
+      </div>
+
+      <!-- coluna 2 -->
+      <div class="col-lg-3">
+        <div class="row">
+          <div class="form-group">
+              <label>Posição de Jogo:</label>
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                  Selecione a posição
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-header">Defesa</li>
+                  <li><a>Esquerdo</a></li>
+                  <li><a>Centro</a></li>
+                  <li><a>Direito</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Médio</li>
+                  <li><a>Trinco</a></li>
+                  <li><a>Centro</a></li>
+                  <li><a>Atacante</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Atacante</li>
+                  <li><a>Extremo</a></li>
+                  <li><a>Avançado</a></li>
+                  <li><a>Ponta de Lança</a></li>
+                </ul>
+              </div>
+              <p class="help-block"></p>
+          </div>
+
+          <div class="form-group">
+              <label>Número:</label>
+              <input class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <!-- coluna 3 -->
+      <div class="col-lg-2">
+        <!-- the avatar markup -->
+        <div id="kv-avatar-errors-2" class="center-block" style="width:800px;display:none"></div>
+        <form class="text-center" action="/avatar_upload.php" method="post" enctype="multipart/form-data">
+            <div class="kv-avatar center-block" style="width:200px">
+                <input id="avatar-2" name="avatar-2" type="file" class="file-loading">
+            </div>
+            <!-- include other inputs if needed and include a form submit (save) button -->
+        </form>
+        <!-- your server code `avatar_upload.php` will receive `$_FILES['avatar']` on form submission -->
+
+        <!-- the fileinput plugin initialization -->
+        <script type="text/javascript" src="js/avatar.js"></script>
+
+      </div>
+
+
+      <!-- coluna de baixo -->
+      <div class="col-lg-6" >
+          <h3>Finalização</h3>
+          <div kendo-progress-bar="finalBar" k-min="0" k-max="100" ng-model="dynamicFinal" ng-click="progress('final')" style="width: 100%;"></div>
+          <p class="help-block" style="color:red" ng-if="dynamicFinal >= 0 && dynamicFinal < 50">Insuficiente <i class="glyphicon glyphicon-remove"></i></p>
+          <p class="help-block" style="color:blue" ng-if="dynamicFinal >= 50 && dynamicFinal < 75">Médio <i class="glyphicon glyphicon-link"></i></p>
+          <p class="help-block" style="color:#5cb85c" ng-if="dynamicFinal >= 75 && dynamicFinal <= 100">Excelente <i class="glyphicon glyphicon-ok"></i></p>
+
+          <h3>Resistência</h3>
+          <div kendo-progress-bar="resistBar" k-min="0" k-max="100" ng-model="dynamicResist" ng-click="progress('resist')" style="width: 100%;"></div>
+          <p class="help-block" style="color:red" ng-if="dynamicResist >= 0 && dynamicResist < 50">Insuficiente <i class="glyphicon glyphicon-remove"></i></p>
+          <p class="help-block" style="color:blue" ng-if="dynamicResist >= 50 && dynamicResist < 75">Médio <i class="glyphicon glyphicon-link"></i></p>
+          <p class="help-block" style="color:#5cb85c" ng-if="dynamicResist >= 75 && dynamicResist <= 100">Excelente <i class="glyphicon glyphicon-ok"></i></p>
+
+          <h3>Espirito de Equipa</h3>
+          <div kendo-progress-bar="teamBar" k-min="0" k-max="100" ng-model="dynamicEquipa" ng-click="progress('equipa')" style="width: 100%;"></div>
+          <p class="help-block" style="color:red" ng-if="dynamicEquipa >= 0 && dynamicEquipa < 50">Insuficiente <i class="glyphicon glyphicon-remove"></i></p>
+          <p class="help-block" style="color:blue" ng-if="dynamicEquipa >= 50 && dynamicEquipa < 75">Médio <i class="glyphicon glyphicon-link"></i></p>
+          <p class="help-block" style="color:#5cb85c" ng-if="dynamicEquipa >= 75 && dynamicEquipa <= 100">Excelente <i class="glyphicon glyphicon-ok"></i></p>
+      </div>
+    </div>
+  </div>

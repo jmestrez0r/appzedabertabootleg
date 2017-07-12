@@ -1,0 +1,71 @@
+
+
+.columns {
+  columns: 4 !important;
+}
+
+.rows {
+  rows: 6 !important;
+}
+
+
+.kv-avatar .file-preview-frame,.kv-avatar .file-preview-frame:hover {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    text-align: center;
+}
+.kv-avatar .file-input {
+    display: table-cell;
+    max-width: 220px;
+}
+
+.numberCircle {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+
+    width: 24px;
+    height: 24px;
+    padding: 8px;
+
+    background: #fff;
+    border: 2px solid #666;
+    text-align: center;
+
+    font: 24px Arial, sans-serif;
+}
+
+.calendar-text {
+    margin-top: 1em;
+    font: 18px Arial, sans-serif;
+}
+
+.circle-text {
+  font-size: 10px;
+  align-items: center !important;
+  top: -40px !important;
+  position: relative;
+  margin-top: 30px;
+  text-align: center;
+  margin-left: 0px;
+}
+
+.circle {
+  margin-top: 1.92em;
+}
+
+.practices-columns {
+  columns: 3 !important;
+  -webkit-column-width: auto; /* Chrome, Safari, Opera */
+  -moz-column-width: auto; /* Firefox */
+  column-width: auto;
+  width: 100%;
+  align-items: center;
+  align-content: center;
+}
+
+.k-state-selected  {
+  background-color: red;
+  border-color: red;
+}
